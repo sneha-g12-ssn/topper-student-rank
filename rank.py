@@ -1,4 +1,5 @@
 import csv
+import sys
 from operator import itemgetter
 
 def find_topper(students,mark,i):
@@ -13,7 +14,7 @@ def find_topper(students,mark,i):
   
  
 
-file_to_open="Student_marks_list.csv"
+file_to_open=sys.argv[1]
 
 with open(file_to_open, 'r') as this_csv_file:
  this_csv_reader = csv.reader(this_csv_file, delimiter=",")
